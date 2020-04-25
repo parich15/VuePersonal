@@ -1,0 +1,38 @@
+.b-navbar-brand {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+.titulo {
+    font-family: 'Montserrat';  
+    transition: ease-in 400ms;
+    color:white;
+
+  &:hover {
+      color:$color-secundario-light!important;
+  }
+
+}
+.bg-primary{
+    background-color: $color-primario!important;
+}
+.popover-header{
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    cursor: context-menu;
+}
+.contactoPop {
+    font-family: 'Montserrat';
+    color: $texto-semioscuro;
+    font-size: 1.2em;
+    transition: ease-in 300ms;
+    &:hover{
+        text-decoration: none;
+        color: $color-secundario-light;
+    }
+}
+
+@include mediaSm {
+    .titulo {
+        margin-left:0px!important;
+    }
+}

@@ -15,7 +15,12 @@
           <b-icon icon="envelope"></b-icon><a class="contactoPop" href="mailto:oscarparicio8@gmail.com?Subject=Contacto%20Web"> Mail</a>
         </div></b-popover>   
     </b-navbar-brand>
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <b-navbar-toggle target="nav-collapse">
+        <template v-slot:default="{ expanded }">
+        <b-icon v-if="expanded" icon="three-dots-vertical"></b-icon>
+        <b-icon v-else icon="three-dots"></b-icon>
+      </template>
+    </b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
 
@@ -23,14 +28,14 @@
       <b-navbar-nav class="ml-auto">
         
 
-        <b-nav-item-dropdown text="Proyectos" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">ES</b-dropdown-item>
-          <b-dropdown-item href="#">RU</b-dropdown-item>
-          <b-dropdown-item href="#">FA</b-dropdown-item>
+        <b-nav-item-dropdown text="Proyectos" class="linkProyectos" right>
+          <b-dropdown-item to="/vue" class="Proyectos">Captotal</b-dropdown-item>
+          <b-dropdown-item href="#" class="Proyectos">Carland</b-dropdown-item>
+          <b-dropdown-item href="#" class="Proyectos">Cemar</b-dropdown-item>
+          <b-dropdown-item href="#" class="Proyectos">ViuRe</b-dropdown-item>
         </b-nav-item-dropdown>
 
-        <b-navbar-nav>
+        <b-navbar-nav class="mr-3 linksMenu">
         <b-nav-item to="#">Sobre Mi</b-nav-item>
         <b-nav-item to="#">Contacto</b-nav-item>
       </b-navbar-nav>

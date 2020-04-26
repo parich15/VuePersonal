@@ -1,3 +1,4 @@
+
 .b-navbar-brand {
     font-family: Avenir, Helvetica, Arial, sans-serif;
 }
@@ -7,7 +8,7 @@
     color:white;
 
   &:hover {
-      color:$color-secundario-light!important;
+      color:$color-secundario!important;
   }
 
 }
@@ -27,12 +28,53 @@
     transition: ease-in 300ms;
     &:hover{
         text-decoration: none;
-        color: $color-secundario-light;
+        color: $color-secundario-l;
+    }
+}
+.navbar-dark .navbar-nav .nav-link{
+    font-family: 'Montserrat';
+    @include easeIn();
+
+    &:hover{
+        color:$color-secundario;
+    }
+}
+.navbar-nav .Proyectos{
+    font-family: 'Montserrat';
+    text-align: right;
+    @include easeIn();
+    
+    &:hover{
+        font-size:1.2em;
+        color:$color-secundario!important;
     }
 }
 
+.Proyectos>a:hover{
+    color:$color-secundario;
+    
+}
+
+.dropdown-item:hover, .dropdown-item:focus{
+    background-color: unset;
+}
 @include mediaSm {
     .titulo {
         margin-left:0px!important;
+    }
+    .linksMenu {
+        margin-right: 0px!important;
+    }
+    .navbar-nav .Proyectos{
+        text-align:center;
+    }
+    .dropdown-menu{
+        background-color: #888;
+    }
+    .navbar-nav .Proyectos{
+        transform: scale(1)!important;
+    }
+    .dropdown-item:hover, .dropdown-item:focus{
+        background-color: unset;
     }
 }

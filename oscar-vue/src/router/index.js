@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 import Inicio from '../views/Inicio'
 import Navbar from '../components/Navbar.vue'
 
@@ -15,14 +14,6 @@ Vue.use(VueRouter)
       header: Navbar
     }
   },
-  {
-    path: '/vue',
-    name: 'Home',
-    components:{
-      default:Home,
-      header: Navbar
-    }
-  }
 ]
 
 const router = new VueRouter({

@@ -33,6 +33,7 @@
 }
 .navbar-dark .navbar-nav .nav-link{
     font-family: 'Montserrat';
+    text-align: center!important;
     @include easeIn();
 
     &:hover{

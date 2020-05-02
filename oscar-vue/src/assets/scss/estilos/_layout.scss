@@ -87,3 +87,11 @@
         @include linear-gradient (rgba(44, 44, 44, 0.2), rgba(23, 20, 19, 0.7));
     }
 }
+
+/*BARRA*/
+
+html::-webkit-scrollbar{
+    display: none;
+    width: 0!important;
+    
+}

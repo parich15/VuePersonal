@@ -1,0 +1,60 @@
+.containerCaptacion {
+    min-height: 50vh;
+    margin: 0;
+    padding: 0;
+}
+
+.containerCaptacion .tjtServicios {
+    height: 250px;
+    font-family: 'Quicksand';
+    position: relative;
+    transition: 0.05s ease-in;
+    background: $color-primario-o;
+    overflow: hidden;
+    .card-img {
+        height: 250px;
+    }
+    .card-title {
+        color: $color-secundario;
+    }
+    
+    .card-subtitle{
+        color:$color-secundario-l!important;
+    }
+    .btnSer{
+        transition: 300ms ease-in;
+        opacity: 0;
+        
+    }
+}
+
+.containerCaptacion .tjtServicios:hover{
+    transition: 200ms ease-in();
+        .card-img{
+            transform: scale(1.1);
+            transition: 300ms ease-in;
+            opacity: 0.2;
+        }
+        .card-title {
+            font-size: 1.6em;
+            transition: 300ms ease-in;
+        }
+        .btnSer {
+             opacity: 1;
+             &:hover{
+                background: $color-secundario;
+                transition: 300ms ease-in;
+             }
+        }
+}
+
+@include mediaSm {
+    .containerCaptacion {
+        flex-flow: column;
+
+        .tjtServicios {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}

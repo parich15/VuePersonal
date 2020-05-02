@@ -1,3 +1,5 @@
+
+/*PRINCIPAL*/
 .titulo1{
     font-family: 'Montserrat';
     text-align: center;
@@ -7,6 +9,7 @@
     font-family: 'Montserrat';
     color: $color-primario;
     font-size: 2.8em;
+    text-align: center;
 }
 
 .separadorG{
@@ -15,21 +18,143 @@
 }
 .subtitulo{
     font-family: 'Quicksand';
+    text-align: center;
 }
 .subtitulo2{
     font-family: 'Quicksand';
     color:$texto-semioscuro;
     font-size: 1.3em;
+    text-align: center;
 }
 .principal {
     padding-top:12vh;
+    padding-bottom:5vh;
 }
 
+.textoPresentacion {
+    font-family: 'Montserrat';
+    font-weight: 300;
+    color: $texto-semioscuro;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/*SECUNDARIO*/
+.secundaria {
+    background-color: $background-light;
+}
+.colDatos {
+    background-color: $background-light2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.datos, .presentacion h3 {
+    font-family: 'Montserrat';
+    text-align: center;
+}
+.datos h3 {
+    margin-bottom: 5px!important;
+}
+.separador2 {
+    border: solid $color-secundario 1px;
+    width: 35%;
+    margin-top: 0.5rem;
+}
+
+.columnaInterna {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: center;
+}
+.interna1 , .interna2, .interna3 {
+    width: 20vw;
+    height: 500px;
+}
+.img-thumbnail {
+    background-color: unset;
+    border: none;
+}
+.titIco {
+    font-size: 1.3em;
+    font-family: 'Montserrat';
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: $color-secundario;
+}
+.txtIco {
+    font-family: Quicksand;
+    font-size: 0.9em;
+    text-align: justify;
+}
+.txtPre {
+    font-family: Quicksand;
+    font-size: 0.9em;
+    text-align: center;
+    margin: 0 5vw 0 5vw;
+}
+
+/*Servicios*/
+.servicios {
+    background-color: $color-primario-o;
+    height: auto;
+
+    .titSer  h2{
+        font-family: 'Montserrat';
+        color:$color-secundario;
+        text-align: center;
+        font-size:2.3em
+
+        
+    }
+
+    .titSer .separador3 {
+        border: solid $color-primario 1px;
+        width: 15%;
+        margin-top: 0.5rem;
+    }
+}
+
+/*Terciario*/
+
+.terciario {
+    height: auto;
+    background-color: $texto-semioscuro;
+    .row {
+        padding-top: 40px;
+    }
+    .titServ h2 {
+        color: $color-secundario;
+        text-align: center;
+        font-family: 'Montserrat';
+    }
+    
+}
+
+/*Responsive*/
 @include mediaSm {
     .titulo1{
         font-size: 3em;
     }
     .subtitulo2{
         font-size: 1.1em;
+    }
+    .presentacion h3 {
+        font-size: 1.3em;
+    }
+    .interna1 {
+        flex: 1 0 0;
+    }
+    .interna1 , .interna2, .interna3 {
+        width: 80vw;
+        height: 500px;
+    }
+    .colDatos{
+        display: none;
+    }
+    .txtPre {
+        margin: 0 2vw 0 2vw;    
     }
 }
